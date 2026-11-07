@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار الأحياء - الفصل الأول (الخلية)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- الشاشة الافتتاحية -->
+        <div id="start-screen" class="card active">
+            <div class="icon-header">🧬</div>
+            <h1>اختبار مادة الأحياء</h1>
+            <h2>الفصل الأول: تركيب الخلية ووظائفها</h2>
+            <p>اختبار شامل مكون من 100 سؤال اختيار من متعدد وفق المنهج الدراسي.</p>
+            
+            <div class="quiz-info">
+                <div class="info-item">
+                    <span class="info-icon">❓</span>
+                    <span>100 سؤال</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⏱️</span>
+                    <span>بدون وقت محدد</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🎯</span>
+                    <span>تصحيح فوري</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="btn primary-btn">ابدأ الاختبار الآن</button>
+        </div>
+
+        <!-- شاشة الأسئلة -->
+        <div id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="quiz-stats">
+                    <span id="question-counter">سؤال 1 من 100</span>
+                    <span id="score-counter">النتيجة: 0</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h3 id="question-text">نص السؤال</h3>
+                <div id="options-container" class="options-container"></div>
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+
+            <div class="quiz-footer">
+                <button id="prev-btn" class="btn secondary-btn" disabled>السابق</button>
+                <button id="next-btn" class="btn primary-btn hidden">السؤال التالي</button>
+            </div>
+        </div>
+
+        <!-- شاشة النتيجة -->
+        <div id="result-screen" class="card hidden">
+            <div class="result-header">
+                <div id="result-icon" class="result-icon">🏆</div>
+                <h2>نتيجة الاختبار</h2>
+                <div class="score-circle">
+                    <span id="final-score">0</span>
+                    <span class="score-total">/ 100</span>
+                </div>
+                <p id="result-message" class="result-message"></p>
+            </div>
+
+            <div class="result-stats">
+                <div class="stat-box correct">
+                    <span class="stat-number" id="correct-count">0</span>
+                    <span class="stat-label">إجابة صحيحة</span>
+                </div>
+                <div class="stat-box wrong">
+                    <span class="stat-number" id="wrong-count">0</span>
+                    <span class="stat-label">إجابة خاطئة</span>
+                </div>
+                <div class="stat-box percentage">
+                    <span class="stat-number" id="percentage">0%</span>
+                    <span class="stat-label">النسبة المئوية</span>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button id="restart-btn" class="btn primary-btn">إعادة الاختبار</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
